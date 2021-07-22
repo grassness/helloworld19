@@ -4,7 +4,7 @@ pipeline {
         pollSCM '* * * * *'
     }
 
-    enviroment {
+    environment {
         registry = "grassness/devop-pipeline"
         registryCredential = "DockerID"
     }
