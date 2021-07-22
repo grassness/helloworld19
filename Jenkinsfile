@@ -3,13 +3,12 @@ pipeline {
     triggers {
         pollSCM '* * * * *'
     }
-
+    tools {
+        maven 'M2_HOME'
+    }
     environment {
         registry = "grassness/devop-pipeline"
         registryCredential = "DockerID"
-    }
-    tools {
-        maven 'M2_HOME'
     }
     stages {
         stage('build') {
