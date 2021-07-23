@@ -7,7 +7,7 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        registry = "grassness/development1-pipeline"
+        registry = "grassness/development1"
         registryCredential = 'DockerID'
     }
     stages {
