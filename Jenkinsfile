@@ -7,7 +7,7 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        registry = "grassness/web-app"
+        registry = "grassness/devops_pipeline"
         registryCredential = 'DockerID'
     }
     stages {
@@ -29,7 +29,7 @@ pipeline {
         stage ('Deploy') {
             steps {
                 script {
-                    docker.build registry = ":$BUILD_NUMBER"
+                    docker.build registry + ":$BUILD_NUMBER"
                 }
             }
         }    
